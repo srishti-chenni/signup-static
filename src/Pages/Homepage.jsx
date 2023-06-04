@@ -11,7 +11,6 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [interests, setInterests] = useState([]);
   const [bio, setBio] = useState("");
-  const [photos, setPhotos] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -34,11 +33,6 @@ const Signup = () => {
 
   const handleInterestsChange = (selectedOptions) => {
     setInterests(selectedOptions);
-  };
-
-  const handlePhotoChange = (e) => {
-    const files = Array.from(e.target.files);
-    setPhotos(files);
   };
 
   const handleSubmit = () => {
@@ -185,7 +179,6 @@ const Signup = () => {
                     name="photos"
                     multiple
                     accept="image/*"
-                    onChange={handlePhotoChange}
                   />
                 </div>
                 <button
